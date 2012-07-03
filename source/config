@@ -1,0 +1,12 @@
+defaults:
+mount_dir=
+file_size=
+chunk_size=
+num_files=
+output_file=
+output_label=
+ram_size=
+num_processes=
+bufffered_io=
+===
+run:
