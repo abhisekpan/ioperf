@@ -3,10 +3,10 @@
 import csv
 import sys
 import fileinput
-try:
-    in_filename = sys.argv[1]
-except IndexError:
-    in_filename = sys.stdin
+#try:
+#    in_filename = sys.argv[1]
+#except IndexError:
+#    in_filename = sys.stdin
 #relevant columns
 relevant_cols = [2,	#host
     5,	#File Size (GB)
@@ -27,7 +27,7 @@ try:
         outlist = [row[i] for i in xrange(len(row)) if i in relevant_cols]
         csv.writer(sys.stdout).writerow(outlist)
 except csv.Error, e:
-    sys.exit('file %s, line %d: %s' % (filename, reader.line_num, e))
+    sys.exit('file %s, line %d: %s' % (fileinput.filename(), reader.line_num, e))
 
 #input = sys.stdin.readline().split(',')
 #sys.stdout.write(input)

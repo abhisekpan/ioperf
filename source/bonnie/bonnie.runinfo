@@ -1,0 +1,7 @@
+Access Mode, Mount Point, File Size(GB), Num Files, Block Size(KB), Runs
+1, /home/tmp/bonniedir, 2, 20, 1, 20
+,	,2	,20	,4	,20
+,       ,2      ,20     ,16      ,20
+,       ,2      ,20     ,64      ,20
+,       ,2      ,20     ,256      ,20
+,       ,2      ,20     ,1024      ,20
