@@ -92,7 +92,7 @@ def main():
                 run_list.extend(['-m',os.uname()[1]])
                 run_list.extend(['-u','apan:apan'])
                 run_list.extend(['>',outfile])
-                sys.stderr.write('run #'+str(linect) + ':' + ' '.join(run_list) + '\n')
+                sys.stderr.write('run #'+str(linect - 1) + ':' + ' '.join(run_list) + '\n')
                 subprocess.call(' '.join(run_list), shell=True)
                 #===parse output===
                 subprocess.call(' '.join(['./format_out.py',outfile]), shell=True)
