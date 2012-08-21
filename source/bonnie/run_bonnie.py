@@ -80,7 +80,8 @@ def main():
 			mount = subprocess.call(' '.join(['mount -t nfs -o tcp', server_export, mount_dir]), shell=True)
 			if mount != 0: sys.exit ("Can not mount nfs filesystem")
                         #subprocess.call('./mount_nfs.sh', shell=True)
-                outfile = outdir + '_'.join([os.uname()[1],config_options["fs"],config_options["fsize"],config_options["bsize"],config_options["numf"],config_options["numr"],'.txt'])
+                outfile = outdir + '_'.join([os.uname()[1], config_options["fs"], config_options["fsize"] + 'G',
+                                    config_options["bsize"] + 'K', config_options["numf"], config_options["numr"],'.txt'])
 		#===run bonnie++===
                 run_list = [bonnie, '-q -f' ]
                 if int(config_options["mode"]) == 0: run_list.append('-D')
